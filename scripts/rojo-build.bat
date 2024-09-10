@@ -1,2 +1,2 @@
 call scripts/wally-install
-rojo build game.project.json --output game.rbxl
+rojo build dev.project.json --output package.rbxl

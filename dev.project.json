@@ -1,0 +1,50 @@
+{
+  "name": "package",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "Packages": { "$path": "Packages",
+        "_Index": { "$className": "Folder",
+          "your_package@0.0.0": { "$className": "Folder",
+            "package": { "$path": "src",
+              "Assets": { "$path": "assets" }
+            }
+          }
+        },
+        "package": {
+          "$className": "ModuleScript",
+          "$properties": {
+            "Source": "return require(script.Parent._Index[\"your_package@0.0.0\"][\"package\"])"
+          }
+        }
+      }
+    },
+    "ServerScriptService": {
+      "Packages": { "$path": "ServerPackages" }
+    },
+    "ServerStorage": {
+      "Stories": { "$path": "stories" }
+    },
+    "TestService": {
+      "Packages": { "$path": "DevPackages" },
+      "Tests": { "$path": "tests" }
+    },
+
+    "Workspace": {
+      "$properties": {
+        "FilteringEnabled": true
+      }
+    },
+    "HttpService": {
+      "$properties": {
+        "HttpEnabled": false
+      }
+    },
+    "SoundService": {
+      "$properties": {
+        "RespectFilteringEnabled": true
+      }
+    }
+  }
+}
