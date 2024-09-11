@@ -8,27 +8,9 @@ environments:
     branches: [master]
 
 target:
-  experience:
-    configuration:
-      genre: all
-      playability: private
-      
-      enableStudioAccessToApis: true
-      allowThirdPartyTeleports: false
-      allowThirdPartySales: false
-
-      avatarType: playerChoice
-      avatarAnimationType: playerChoice
-      avatarCollisionType: outerBox
-    places:
-      start:
-        file: game.rbxl
-        configuration:
-          name: 'Game'
-          serverFill: robloxOptimized
-          maxPlayerCount: 10
-          allowCopying: false
-    assets:
-      - assets/images/**/*.png
-      - assets/sounds/**/*.mp4
-      - assets/sounds/**/*.ogg
+# still we cant deploy models with mantle :pensive:
+#   model:
+#     assets:
+#       - assets/images/**/*.png
+#       - assets/sounds/**/*.mp4
+#       - assets/sounds/**/*.ogg
