@@ -1,0 +1,3 @@
+local cavalo = {}
+
+return cavalo
