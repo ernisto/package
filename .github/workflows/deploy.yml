@@ -23,9 +23,9 @@ jobs:
           version: latest # NOTE: we recommend pinning to a specific version in case of formatting changes
           # CLI arguments
           args: --check src
-      # Build the project with rojo
-      # - name: Build project
-      #   run: scripts/rojo-build
+      # Build the model with rojo
+      - name: Build model
+        run: scripts/rojo-build-model
       # Deploy the project with mantle
       # - name: Deploy project
       #   run: mantle deploy

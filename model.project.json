@@ -1,0 +1,12 @@
+{
+    "name": "package",
+    "tree": { "$path": "Packages",
+        "$className": "ModuleScript",
+        "$properties": {
+            "Source": "return require(script[\"package\"])"
+        },
+        "package": { "$path": "src",
+            "Assets": { "$path": "assets" }
+        }
+    }
+}

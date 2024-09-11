@@ -1,5 +1,6 @@
 # Project place file
 /*.rbxl
+/*.rbxm
 
 # Lock files
 /*.lock
@@ -11,6 +12,3 @@ sourcemap.json
 ServerPackages
 DevPackages
 Packages
-
-# Blink
-out

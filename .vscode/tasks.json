@@ -15,9 +15,20 @@
             }
         },
         {
-            "label": "rojo-build",
+            "label": "rojo-build-dev",
             "type": "shell",
-            "command": "scripts/rojo-build",
+            "command": "scripts/rojo-build-dev",
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": "^error: (.*)",
+                    "message": 1
+                }
+            }
+        },
+        {
+            "label": "rojo-build-model",
+            "type": "shell",
+            "command": "scripts/rojo-build-model",
             "problemMatcher": {
                 "pattern": {
                     "regexp": "^error: (.*)",
