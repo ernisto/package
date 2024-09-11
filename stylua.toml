@@ -1,3 +1,4 @@
 column_width = 120
 indent_width = 4
 collapse_simple_statement = 'ConditionalOnly'
+line_endings = 'Windows'
