@@ -5,18 +5,8 @@
 
     "ReplicatedStorage": {
       "Packages": { "$path": "Packages",
-        "_Index": { "$className": "Folder",
-          "your_package@0.0.0": { "$className": "Folder",
-            "package": { "$path": "src",
-              "Assets": { "$path": "assets" }
-            }
-          }
-        },
-        "package": {
-          "$className": "ModuleScript",
-          "$properties": {
-            "Source": "return require(script.Parent._Index[\"your_package@0.0.0\"][\"package\"])"
-          }
+        "package": { "$path": "src",
+          "Assets": { "$path": "assets" }
         }
       }
     },
