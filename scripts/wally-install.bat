@@ -1,7 +1,7 @@
+wally install
 mkdir ServerPackages
 mkdir DevPackages
 mkdir Packages
-wally install
 
 call scripts/rojo-sourcemap
 wally-package-types --sourcemap sourcemap.json Packages
