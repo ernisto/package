@@ -11,6 +11,10 @@ const config = {
             assets: [
                 { path: "out/rojo/game.rbxl", label: "Rojo build" },
             ]
+        }],
+        ["@semantic-release/exec", {
+            prepareCmd: "python scripts/python/set-wally-version.py ./wally.toml ${nextRelease.version}",
+            publishCmd: "wally publish"
         }]
     ]
 }
