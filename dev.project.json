@@ -5,9 +5,13 @@
     "ReplicatedStorage": {
       "Packages": {
         "$path": "Packages",
-        "Package": { "$path": "src",
+        "Package": {
+          "$path": "src",
           "Config": {
-            "$path": "config"
+            "$path": "config",
+            "wally": {
+              "$path": "wally.toml"
+            }
           },
           "Assets": {
             "$path": "assets",
