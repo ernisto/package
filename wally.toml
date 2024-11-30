@@ -1,16 +1,13 @@
 [package]
-name = "ernisto/game"
+name = "ernisto/package"
 version = "0.1.0"
 registry = "https://github.com/UpliftGames/wally-index"
+authors = ["name <email@gmail.com>"]
 realm = "shared"
 
-[dependencies]
-Promise = "lukadev-0/typed-promise@4.0.2"
-spr = "skiestrixx/spr@2.1.0"
+exclude = ["**"]
+include = ["default.project.json", "src/*", "config/*", "assets/*"]
 
 [dev-dependencies]
 uilabs = "pepeeltoro41/ui-labs@2.3.0"
 TestEZ = "roblox/testez@0.4.1"
-
-[server-dependencies]
-ProfileStore = "lm-loleris/profilestore@1.0.2"
