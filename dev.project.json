@@ -1,0 +1,48 @@
+{
+  "name": "package",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "Packages": {
+        "$path": "Packages",
+        "Package": { "$path": "src",
+          "Config": {
+            "$path": "config"
+          },
+          "Assets": {
+            "$path": "assets",
+            "$ignoreUnknownInstances": true
+          }
+        }
+      }
+    },
+    "ServerScriptService": {
+      "Packages": {
+        "$path": "ServerPackages"
+      }
+    },
+    "ServerStorage": {
+      "Stories": {
+        "$path": "stories"
+      }
+    },
+    "TestService": {
+      "Packages": {
+        "$path": "DevPackages"
+      },
+      "Tests": {
+        "$path": "tests"
+      }
+    },
+    "HttpService": {
+      "$properties": {
+        "HttpEnabled": false
+      }
+    },
+    "SoundService": {
+      "$properties": {
+        "RespectFilteringEnabled": true
+      }
+    }
+  }
+}

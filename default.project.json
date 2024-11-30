@@ -1,0 +1,7 @@
+{
+    "name": "package",
+    "tree": { "$path": "src",
+        "Config": { "$path": "config" },
+        "Assets": { "$path": "assets" }
+    }
+}
