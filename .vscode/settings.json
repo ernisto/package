@@ -1,0 +1,63 @@
+{
+    "explorer.fileNesting.patterns": {
+        "*.js": "${capture}.*.js, ${capture}.*.ts, ${capture}.js, ${capture}.js.map",
+        "*.ts": "${capture}.*.js, ${capture}.*.ts, ${capture}.js",
+        "*.luau": "${capture}.*.lua, ${capture}.*.luau",
+        "*.lua": "${capture}.*.lua, ${capture}.*.luau",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": ".luaurc, *.toml, *.json, *.yml, *.yaml, *.lock, *.js",
+        "README.md": "*.md",
+        "init.cmd": "*.cmd",
+        "init.sh": "*.sh",
+        ".gitattributes": ".gitignore, *.md, LICENSE"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".mantle-state.yml": true,
+        "wally.lock": true,
+        "package-lock.json": true,
+        "node_modules": true,
+        "sourcemap.json": true,
+        "ServerPackages": true,
+        "DevPackages": true,
+        "Packages": true,
+        "out": true,
+        ".vscode": true,
+        ".github": true,
+        ".husky": true
+    },
+    "yaml.schemas": {
+        "https://mantledeploy.vercel.app/schemas/v0.11.15/schema.json": [
+            "mantle.yml"
+        ],
+        "https://json.schemastore.org/github-workflow.json": ".github/workflows/deploy.yml"
+    },
+    "json.schemaDownload.enable": true,
+    "json.schemas": [
+        {
+            "fileMatch": ["**/.luaurc"],
+            "url": "https://gist.githubusercontent.com/ernisto/818ced9f4243a8542af681c23cdcfd9e/raw/57d439d83ad5c74dec8a24afe9d369a5b89c52e4/luaurc.schema.json"
+        }
+    ],
+    "luau-lsp.ignoreGlobs": [
+        "**/node_modules/**",
+        "node_modules/**",
+        "**/_Index/**",
+        "out/**"
+    ],
+    "luau-lsp.types.definitionFiles": [
+        "globals/testez.d.luau"
+    ],
+    "files.eol": "\n",
+    "files.associations": {
+        "*.blink": "blink",
+        ".luaurc": "jsonl"
+    },
+}

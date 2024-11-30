@@ -1,0 +1,19 @@
+# Project place file
+/*.rbxl
+
+# Rojo
+sourcemap.json
+
+# Wally
+ServerPackages
+DevPackages
+Packages
+
+# Blink
+out
+
+# Local Secrets
+.env
+
+# Node Modules
+node_modules

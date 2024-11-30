@@ -1,0 +1,46 @@
+owner:
+  group: 16774807 # this is Starled Games group, but you should change it for your project
+
+environments:
+  - label: dev
+    targetAccess: private
+    branches: [dev, dev/*]
+
+  - label: release
+    targetAccess: public
+    branches: [master]
+
+state:
+  remote:
+    region:
+      custom:
+        name: ENAM # Bucket Location
+        endpoint: https://dc88f586de4d2c1eb08099d9e049613e.r2.cloudflarestorage.com # Bucket API S3
+    bucket: starled-games-mantle-states # Bucket Name
+    key: template # Prefix of .mantle-state.yml, tipically your project name
+
+target:
+  experience:
+    configuration:
+      genre: all
+      playability: private
+
+      enableStudioAccessToApis: true
+      allowThirdPartyTeleports: false
+      allowThirdPartySales: false
+
+      avatarType: playerChoice
+      avatarAnimationType: playerChoice
+      avatarCollisionType: outerBox
+    places:
+      start:
+        file: out/rojo/game.rbxl
+        configuration:
+          name: "Game"
+          serverFill: robloxOptimized
+          maxPlayerCount: 10
+          allowCopying: false
+    assets:
+      - assets/images/**/*.png
+      - assets/sounds/**/*.mp4
+      - assets/sounds/**/*.ogg

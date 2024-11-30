@@ -1,0 +1,41 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "a game template for roblox",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ernisto/game.git"
+  },
+  "keywords": [
+    "roblox",
+    "game"
+  ],
+  "author": "ernisto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ernisto/game/issues"
+  },
+  "homepage": "https://github.com/ernisto/game#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "semantic-release": "^24.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
