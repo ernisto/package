@@ -14,7 +14,7 @@ const config = {
         }],
         ["@semantic-release/exec", {
             prepareCmd: "python scripts/python/set-wally-version.py ./wally.toml ${nextRelease.version}",
-            publishCmd: "scripts/wally-publish.cmd"
+            publishCmd: "powershell ./scripts/wally-publish.cmd"
         }]
     ]
 }
