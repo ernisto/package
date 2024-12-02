@@ -1,6 +1,12 @@
 {
     "name": "package",
     "tree": { "$path": "src",
+        "MainModule": {
+            "$className": "ModuleScript",
+            "$properties": {
+                "Source": "return require(script.Parent)"
+            }
+        },
         "Config": { "$path": "config",
             "wally": { "$path": "wally.toml" }
         },
