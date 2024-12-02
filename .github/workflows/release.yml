@@ -17,11 +17,6 @@ jobs:
       - name: Checkout git files
         uses: actions/checkout@v2
 
-      - name: Download builded place
-        uses: alehechka/download-tartifact@v2
-        with:
-          name: place-build
-
       - name: Setup Aftman Tools
         uses: ok-nick/setup-aftman@v0.4.2
         with:
@@ -29,12 +24,9 @@ jobs:
           cache: true
 
       - name: Deploy project
-        run: mantle deploy
+        run: rojo upload model.project.json --asset_id ${{ vars.ASSET_ID }} --cookie $ROBLOX_SECURITY
         env:
-          ROBLOSECURITY: ${{ secrets.ROBLOSECURITY }}
-          MANTLE_OPEN_CLOUD_API_KEY: ${{ secrets.MANTLE_OPEN_CLOUD_API_KEY }}
-          MANTLE_AWS_ACCESS_KEY_ID: ${{ secrets.MANTLE_AWS_ACCESS_KEY_ID }}
-          MANTLE_AWS_SECRET_ACCESS_KEY: ${{ secrets.MANTLE_AWS_SECRET_ACCESS_KEY }}
+          ROBLOX_SECURITY: ${{ secrets.ROBLOX_SECURITY }}
 
   release-github-version:
     runs-on: Windows-Latest
