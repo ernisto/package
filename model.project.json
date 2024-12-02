@@ -2,7 +2,7 @@
     "name": "package",
     "tree": { "$path": "src",
         "Config": { "$path": "config",
-            "Wally": { "$path": "wally.toml" }
+            "wally": { "$path": "wally.toml" }
         },
         "Assets": { "$path": "assets" }
     }
