@@ -55,6 +55,7 @@ used by github action
 - Create the variable:
     - `HUSKY = 0` to disable client git hooks on github server
     - `CI = true` to disable client hooks on github actions
+    - `ASSET_ID` to set your package asset id
     - `TEST_RUNNER_PLACE_ID` to set a place for unit tests be executed
     - `TEST_RUNNER_UNIVERSE_ID` to set a experience for unit tests be executed
 - Create the secrets:
