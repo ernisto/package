@@ -6,7 +6,7 @@ authors = ["name <email@gmail.com>"]
 realm = "shared"
 
 exclude = ["**"]
-include = ["default.project.json", "src/*", "config/*", "assets/*"]
+include = ["default.project.json", "wally.toml", "src/*", "config/*", "assets/*"]
 
 [dev-dependencies]
 uilabs = "pepeeltoro41/ui-labs@2.3.0"
