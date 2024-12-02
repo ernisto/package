@@ -9,11 +9,12 @@ or by wally
 package = "ernisto/package@0.1.0"
 ```
 
-## Download Repository
+# Development Setup
+## Clone Repository
 When you install [Git](https://git-scm.com/downloads) if already have not,
 run clone this repository with
 ```sh
-git clone https://github.com/ernisto/game
+git clone https://github.com/ernisto/package
 ```
 
 learn more: [git cloning an existing repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
