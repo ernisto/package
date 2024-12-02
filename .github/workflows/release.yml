@@ -24,7 +24,7 @@ jobs:
           cache: true
 
       - name: Deploy project
-        run: rojo upload model.project.json --asset_id ${{ vars.ASSET_ID }} --cookie $ROBLOX_SECURITY
+        run: rojo upload model.project.json --asset_id ${{ vars.ASSET_ID }} --cookie %ROBLOX_SECURITY%
         env:
           ROBLOX_SECURITY: ${{ secrets.ROBLOX_SECURITY }}
 
