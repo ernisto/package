@@ -28,3 +28,9 @@ jobs:
         with:
           name: place-build
           path: out/rojo/game.rbxl
+
+      - name: Upload model build
+        uses: alehechka/upload-tartifact@v2
+        with:
+          name: model-build
+          path: out/rojo/model.rbxm
