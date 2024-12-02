@@ -47,10 +47,10 @@ jobs:
       - name: Checkout git files
         uses: actions/checkout@v2
 
-      - name: Download builded place
+      - name: Download builded model
         uses: alehechka/download-tartifact@v2
         with:
-          name: place-build
+          name: model-build
 
       - name: Setup node v20.8.1
         uses: actions/setup-node@v2
