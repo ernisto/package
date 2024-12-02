@@ -1,12 +1,12 @@
 # Installation
-Download the [roblox model](https://github.com/ernisto/package/releases/download/v0.1.0/model.rbxm), or get the [model](https://create.roblox.com/store/asset/77872017928574/package&assetType=Model).
+Download the [roblox model](https://github.com/ernisto/package/releases/download/v0.1.1/model.rbxm), or get the [model](https://create.roblox.com/store/asset/77872017928574/package&assetType=Model).
 require by id
 ```lua
 local package = require(77872017928574)
 ```
 or by wally
 ```toml
-package = "ernisto/package@0.1.0"
+package = "ernisto/package@0.1.1"
 ```
 
 # Development Setup
