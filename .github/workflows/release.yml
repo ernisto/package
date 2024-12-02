@@ -23,6 +23,11 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           cache: true
 
+      - name: Test
+        run: echo %cavalo%
+        env:
+          cavalo: 10
+
       - name: Deploy project
         run: rojo upload model.project.json --asset_id ${{ vars.ASSET_ID }} --cookie %ROBLOX_SECURITY%
         env:
