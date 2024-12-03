@@ -1,9 +1,12 @@
 {
     "name": "MainModule",
-    "tree": { "$path": "src",
-        "Config": { "$path": "config",
-            "wally": { "$path": "wally.toml" }
-        },
-        "Assets": { "$path": "assets" }
+    "tree": {
+        "$path": "Packages",
+        "package": { "$path": "src",
+            "Config": { "$path": "config",
+                "wally": { "$path": "wally.toml" }
+            },
+            "Assets": { "$path": "assets" }
+        }
     }
 }
