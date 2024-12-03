@@ -8,6 +8,9 @@ realm = "shared"
 exclude = ["**"]
 include = ["default.project.json", "wally.toml", "src/*", "config/*", "assets/*"]
 
+[dependencies]
+promise = "lukadev-0/typed-promise@4.0.2"
+
 [dev-dependencies]
 uilabs = "pepeeltoro41/ui-labs@2.3.0"
 TestEZ = "roblox/testez@0.4.1"

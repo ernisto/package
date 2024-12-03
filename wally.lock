@@ -5,7 +5,17 @@ registry = "test"
 [[package]]
 name = "ernisto/package"
 version = "0.1.0"
-dependencies = [["TestEZ", "roblox/testez@0.4.1"], ["uilabs", "pepeeltoro41/ui-labs@2.3.0"]]
+dependencies = [["promise", "lukadev-0/typed-promise@4.0.2"], ["TestEZ", "roblox/testez@0.4.1"], ["uilabs", "pepeeltoro41/ui-labs@2.3.0"]]
+
+[[package]]
+name = "evaera/promise"
+version = "4.0.0"
+dependencies = []
+
+[[package]]
+name = "lukadev-0/typed-promise"
+version = "4.0.2"
+dependencies = [["Promise", "evaera/promise@4.0.0"]]
 
 [[package]]
 name = "pepeeltoro41/ui-labs"
