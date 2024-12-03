@@ -35,9 +35,6 @@
     },
     "yaml.schemas": {
         "https://json.schemastore.org/github-workflow.json": ".github/workflows/*.yml",
-        "https://mantledeploy.vercel.app/schemas/v0.11.15/schema.json": [
-            "mantle.yml"
-        ],
     },
     "json.schemaDownload.enable": true,
     "json.schemas": [
