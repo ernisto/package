@@ -50,6 +50,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: debug
+        run: ls
+
+      - name: Install wally packages
+        run: scripts/wally-install model.project.json
+
       - name: Deploy project
         run: rojo upload model.project.json --asset_id ${{ vars.ASSET_ID }} --cookie $env:ROBLOSECURITY
         env:
