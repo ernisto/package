@@ -6,7 +6,7 @@ on:
   push:
 
 jobs:
-  build:
+  build-place:
     runs-on: Windows-Latest
     steps:
       - name: Checkout git files
@@ -29,7 +29,7 @@ jobs:
 
   lint-code:
     runs-on: windows-latest
-    needs: build
+    needs: build-place
     steps:
       - name: Checkout your Git repo
         uses: actions/checkout@v2
@@ -87,7 +87,7 @@ jobs:
 
   unit-tests:
     runs-on: windows-latest
-    needs: build
+    needs: build-place
     steps:
       - name: Checkout your Git repo
         uses: actions/checkout@v2
