@@ -7,30 +7,8 @@ on:
     branches: [master, dev]
 
 jobs:
-  build:
-    uses: ./.github/workflows/build.yml
-
-  deploy:
+  build-and-release-github-version:
     runs-on: Windows-Latest
-    needs: build
-    steps:
-      - name: Checkout git files
-        uses: actions/checkout@v2
-
-      - name: Setup Aftman Tools
-        uses: ok-nick/setup-aftman@v0.4.2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          cache: true
-
-      - name: Deploy project
-        run: rojo upload model.project.json --asset_id ${{ vars.ASSET_ID }} --cookie $env:ROBLOSECURITY
-        env:
-          ROBLOSECURITY: ${{ secrets.ROBLOSECURITY }}
-
-  release-github-version:
-    runs-on: Windows-Latest
-    needs: build
     permissions:
       pull-requests: write
       contents: write
@@ -48,11 +26,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           cache: true
-
-      - name: Download builded model
-        uses: alehechka/download-tartifact@v2
-        with:
-          name: model-build
 
       - name: Setup node v20.8.1
         uses: actions/setup-node@v2
@@ -76,3 +49,8 @@ jobs:
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy project
+        run: rojo upload model.project.json --asset_id ${{ vars.ASSET_ID }} --cookie $env:ROBLOSECURITY
+        env:
+          ROBLOSECURITY: ${{ secrets.ROBLOSECURITY }}
