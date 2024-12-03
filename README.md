@@ -42,14 +42,15 @@ used by github action
     - `TEST_RUNNER_UNIVERSE_ID` to set a experience for unit tests be executed
 - Create the secrets:
     - `ROBLOSECURITY` for your personal roblox cookie [Getting your ROBLOXSECURITY cookie](#getting-your-robloxsecurity-cookie-link)
+    - `TEST_RUNNER_OPEN_CLOUD_API_KEY` for the test runner publish and run the unit tests [Creating a Open Cloud API Key](#creating-a-open-cloud-api-key-link)
 
 learn more: [using github secrets](https://docs.github.com/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions)
 
 # Useful infos
 
 ## Creating a Open Cloud API Key [🔗](#creating-a-open-cloud-api-key-link)
-To mantle be able to publish ur place in your account/group,
-you should to create a Open Cloud API Key to be used by mantle
+To github server access your roblox resources, is needed a API Key to roblox allow
+the access from github
 
 - Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 - Click the `Creator Hub` dropdown to select a group if you are creating the API key for a group.
@@ -61,19 +62,14 @@ menu and click the `Add API System` button
 - Select the experience that you want to access with the API key.
 - From the `Experience Operations` dropdown, select the the operation.
 
-Mantle will requires the following `Operations` from the determinated `API Systems`
-- assets
-    - asset:read
-    - asset:write
+Test runner requires the following `Operations` from the determinated `API Systems`
 - universe-places
     - universe-places:write
-- universe
-    - universe:write
-    - universe.place:write
-- notifications
-    - user.user-notifications:write
+- luau-execution-sessions
+    - universe.place.luau-execution-session:read
+    - universe.place.luau-execution-session:write
 
-learn more: [roblox open cloud api](https://create.roblox.com/docs/cloud/open-cloud/api-keys) and [mantle authentication](https://mantledeploy.vercel.app/docs/authentication#roblox-open-cloud-api-key)
+learn more: [roblox open cloud api](https://create.roblox.com/docs/cloud/open-cloud/api-keys)
 
 ## Getting your ROBLOXSECURITY cookie [🔗](#getting-your-robloxsecurity-cookie-link)
 - Navigate to [roblox](https://roblox.com/) in your browser and open the
