@@ -3,6 +3,16 @@
   "version": "1.0.0",
   "description": "a package template for roblox",
   "main": "src/index.luau",
+  "author": "ernisto",
+  "license": "MIT",
+  "homepage": "https://github.com/ernisto/package#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ernisto/package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ernisto/package/issues"
+  },
   "directories": {
     "test": "tests"
   },
@@ -19,12 +29,6 @@
     "roblox",
     "package"
   ],
-  "author": "ernisto",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ernisto/package/issues"
-  },
-  "homepage": "https://github.com/ernisto/package#readme",
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
