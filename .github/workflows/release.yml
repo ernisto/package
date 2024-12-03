@@ -67,6 +67,11 @@ jobs:
       - name: Install node CI modules
         run: npm ci
 
+      - name: Login to wally
+        run: wally login --token $env:GITHUB_TOKEN
+        env:
+          GITHUB_TOKEN: $${{ secrets.GITHUB_TOKEN }}
+
       - name: Release GitHub
         run: npx semantic-release
         env:
