@@ -6,8 +6,30 @@ on:
   push:
 
 jobs:
+  build:
+    runs-on: Windows-Latest
+    steps:
+      - name: Checkout git files
+        uses: actions/checkout@v2
+
+      - name: Setup Aftman Tools
+        uses: ok-nick/setup-aftman@v0.4.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          cache: true
+
+      - name: Build project
+        run: scripts/game-build.cmd
+
+      - name: Upload place build
+        uses: alehechka/upload-tartifact@v2
+        with:
+          name: place-build
+          path: out/rojo/game.rbxl
+
   lint-code:
     runs-on: windows-latest
+    needs: build
     steps:
       - name: Checkout your Git repo
         uses: actions/checkout@v2
@@ -17,6 +39,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           cache: true
+
+      - name: Download place build
+        uses: alehechka/download-tartifact@v2
+        with:
+          name: place-build
 
       - name: Install Wally Modules
         run: scripts/wally-install.cmd
@@ -60,18 +87,15 @@ jobs:
 
   unit-tests:
     runs-on: windows-latest
+    needs: build
     steps:
       - name: Checkout your Git repo
         uses: actions/checkout@v2
 
-      - name: Install aftman and all aftman tools (rojo and mantle)
-        uses: ok-nick/setup-aftman@v0.4.2
+      - name: Download place build
+        uses: alehechka/download-tartifact@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          cache: true
-
-      - name: Build place
-        run: scripts/game-build.cmd
+          name: place-build
 
       - name: Run Tests
         run: python3 scripts/python/upload_and_run_tasks.py out/rojo/game.rbxl tests/run.luau
