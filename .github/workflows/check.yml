@@ -6,9 +6,6 @@ on:
   push:
 
 jobs:
-  build:
-    uses: ./.github/workflows/build.yml
-
   lint-code:
     runs-on: windows-latest
     steps:
@@ -63,7 +60,6 @@ jobs:
 
   unit-tests:
     runs-on: windows-latest
-    needs: build
     steps:
       - name: Checkout your Git repo
         uses: actions/checkout@v2
