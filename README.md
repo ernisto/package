@@ -28,24 +28,6 @@ install all CLI tools, and run our script to install all wally packages with
 
 learn more: [wally](https://github.com/UpliftGames/wally?tab=readme-ov-file#wally-install---locked)
 
-## Configure Mantle Owner
-To mantle publish your place, he must to know what is the owner of the place,
-if will be your personal account, or a roblox group. So we need setting it into `mantle.yml`.
-
-If you are a solo game developer, is a external contribuitor, or is just testing,
-you can just publish in your personal account
-```yml
-owner: personal
-```
-Or if this game is a serious project, that you have +1 developers,
-or just want to organize game revenue and assets, publish into your group
-```yml
-owner:
-    group: your_group_id
-```
-
-learn more: [mantle configuration](https://mantledeploy.vercel.app/docs/configuration/reference#owner)
-
 ## Configure Github Environment
 So you planning implement a CI/CD workflow, where you will automatically publish
 your place when you push some change, you should configure a environment to be
@@ -66,39 +48,6 @@ used by github action
     create `MANTLE_AWS_ACCESS_KEY_ID` and `MANTLE_AWS_SECRET_ACCESS_KEY`
 
 learn more: [using github secrets](https://docs.github.com/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions)
-
-## Configure Local Environment
-If you looking for a local publishment, or you are a external contribuitor,
-is recommended you just create a `.env` file in the root of the project,
-and add the following variables:
-```toml
-MANTLE_OPEN_CLOUD_API_KEY="{api key}"
-TEST_RUNNER_OPEN_CLOUD_API_KEY="{api key}"
-
-# If u want remote mantle state management
-MANTLE_AWS_ACCESS_KEY_ID="{your access key id}"
-MANTLE_AWS_SECRET_ACCESS_KEY="{your secret access key}"
-```
-
-learn more: [mantle .env files](https://mantledeploy.vercel.app/docs/authentication#dotenv-files)
-
-## Configure Remote State Settings
-For both the cases, you should update this part too
-- if you want manage your mantle states remotelly (through Amazon AWS or Cloud Flare)
-you must to fill those infos with your bucket infos
-- otherwise you want manage them locally, just remote it
-```yml
-state:
-  remote:
-    region: # if is Amazon AWS, just the region
-      custom: # if is Cloud Flare
-        name: ENAM # Bucket Location
-        endpoint: https://dc88f586de4d2c1eb08099d9e049613e.r2.cloudflarestorage.com # Bucket API S3
-    bucket: starled-games-mantle-states # Bucket Name
-    key: template # Prefix of .mantle-state.yml, tipically your project name
-```
-
-learn more: [setuping remote states](https://mantledeploy.vercel.app/docs/remote-state)
 
 # Useful infos
 
