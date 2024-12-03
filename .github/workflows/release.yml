@@ -68,12 +68,11 @@ jobs:
         run: npm ci
 
       - name: Login to wally
-        run: wally login --token $env:GITHUB_TOKEN
+        run: wally login --token $env:WALLY_TOKEN
         env:
-          GITHUB_TOKEN: $${{ secrets.GITHUB_TOKEN }}
+          WALLY_TOKEN: ${{ secrets.WALLY_TOKEN }}
 
       - name: Release GitHub
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WALLY_TOKEN: ${{ secrets.WALLY_TOKEN }}
