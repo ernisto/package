@@ -1,1 +1,1 @@
-rojo sourcemap -o sourcemap.json dev.project.json
+rojo sourcemap -o sourcemap.json dev.project.json --include-non-scripts
