@@ -1,8 +1,8 @@
 {
-  "name": "npm",
+  "name": "package",
   "version": "1.0.0",
   "description": "a package template for roblox",
-  "main": "index.js",
+  "main": "src/index.luau",
   "directories": {
     "test": "tests"
   },
@@ -15,14 +15,14 @@
   },
   "keywords": [
     "roblox",
-    "game"
+    "package"
   ],
   "author": "ernisto",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ernisto/game/issues"
+    "url": "https://github.com/ernisto/package/issues"
   },
-  "homepage": "https://github.com/ernisto/game#readme",
+  "homepage": "https://github.com/ernisto/package#readme",
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
