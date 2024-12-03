@@ -3,7 +3,8 @@ mkdir Packages &
 mkdir DevPackages &
 mkdir ServerPackages &
 wally-patch-package &
-call scripts/rojo-sourcemap.cmd
+
+rojo sourcemap %1 -o sourcemap.json --include-non-scripts
 
 wally-package-types --sourcemap sourcemap.json Packages
 wally-package-types --sourcemap sourcemap.json DevPackages
