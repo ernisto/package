@@ -43,7 +43,7 @@
     "json.schemas": [
         {
             "fileMatch": ["**/.luaurc"],
-            "url": "https://gist.githubusercontent.com/ernisto/818ced9f4243a8542af681c23cdcfd9e/raw/57d439d83ad5c74dec8a24afe9d369a5b89c52e4/luaurc.schema.json"
+            "url": "https://json.schemastore.org/luaurc.json"
         }
     ],
     "luau-lsp.ignoreGlobs": [
