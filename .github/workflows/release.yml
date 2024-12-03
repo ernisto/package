@@ -7,8 +7,12 @@ on:
     branches: [master, dev]
 
 jobs:
+  check:
+    uses: ./.github/workflows/check.yml
+
   build-and-release-github-version:
     runs-on: Windows-Latest
+    needs: check
     permissions:
       pull-requests: write
       contents: write
