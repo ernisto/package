@@ -13,7 +13,7 @@ const config = {
             ]
         }],
         ["@semantic-release/exec", {
-            prepareCmd: "shell scripts/release ${nextRelease.version}",
+            prepareCmd: "powershell scripts/release ${nextRelease.version}",
             publishCmd: "wally publish"
         }]
     ]
