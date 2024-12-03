@@ -7,11 +7,13 @@
     "test": "tests"
   },
   "scripts": {
-    "prepare": "husky"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ernisto/package.git"
+    "prepare": "husky",
+    "format": "stylua .",
+    "format:check": "stylua . --check",
+    "clean": "rm -rf node_modules out Packages DevPackages ServerPackages",
+    "build:dev": "powershell scripts/game-build",
+    "build": "powershell scripts/model-build",
+    "test": "powershell scripts/run-tests"
   },
   "keywords": [
     "roblox",
